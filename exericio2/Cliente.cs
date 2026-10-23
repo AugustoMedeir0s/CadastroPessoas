@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace exericio2
 {
-    internal class Class1
+    public class Cliente : pessoa
     {
+        public string CodigoCliente;
+
+        public void ExibirDadosCLientes()
+        {
+            Console.WriteLine("COdigo do cliente: " + CodigoCliente);
+            Apresentar();
+        }
+
+        public Cliente(string nome, int idade, string codigoCliente)
+            : base(nome, idade)
+        {
+            codigoCliente = CodigoCliente;
+        }
     }
 }
